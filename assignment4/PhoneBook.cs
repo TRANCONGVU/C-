@@ -100,6 +100,15 @@ namespace T1809E_Vu
             }
             return null;
         }
+
+        public void display()
+        {
+            foreach (PhoneNumber p in PhoneList)
+            {
+                Console.WriteLine("ten danh ba :" +p.Name);
+                Console.WriteLine("so dien thoai :"+p.Phone);
+            }
+        }
     }
     
 }

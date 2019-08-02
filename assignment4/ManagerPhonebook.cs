@@ -31,11 +31,16 @@ namespace T1809E_Vu
 
                     case 3:
                     {
-                        SearchPhone(list);
+                        UpdatePhone(list);
                         break;
                     }
 
                     case 4:
+                    {
+                        SearchPhone(list);
+                        break;
+                    }
+                    case 5:
                     {
                         start = false;
                         break;
@@ -88,8 +93,23 @@ namespace T1809E_Vu
             foreach (PhoneBook p in list)
             {
                 p.searchPhone(name);
+                p.display();
             }
             
+        }
+
+        static void UpdatePhone(List<PhoneBook> list)
+        {
+            Console.WriteLine("nhap ten");
+            string name = Console.ReadLine();
+            Console.WriteLine("nhap so dien thoai moi");
+            string newphone = Console.ReadLine();
+            foreach (PhoneBook p in list)
+            {
+                p.updatePhone(name, newphone);
+                p.display();
+            }
+
         }
 
     }
